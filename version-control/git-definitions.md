@@ -1,4 +1,4 @@
-# Git Definitions
+# Git Definitions - Thanks for being our teacher in phase-0. ;-)
 
 **Instructions: ** Define each of the following Git concepts.
 
