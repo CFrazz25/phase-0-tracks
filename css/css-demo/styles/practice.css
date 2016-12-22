@@ -1,0 +1,27 @@
+#contact-info {
+  font-size: .8em;
+}
+
+.job {
+  background-color: #e9e5dc;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.accomplishments {
+  font-size: .8em;
+}
+
+/*Pseudoselector rule*/
+
+.job:hover {
+  color: blue;
+}
+
+/*Child element selector*/
+
+section h3 {
+  color: purple;
+}
