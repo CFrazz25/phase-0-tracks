@@ -1,0 +1,38 @@
+# release 0
+- If on lowest floor, press up button outside of the elevator.  
+- When elevator door opens, enter elevator. 
+- Press “close door” button. 
+- While we need to get to the 40th floor, look for the button to get there.
+	- If button does not equal 40, do not push the button and go onto the next number, starting at number 1. 	
+	- If button equals 40, press that button. 
+Until we reach the 40th floor, don’t do anything and don’t leave elevator if other people come in the elevator. 
+	- When we reach the 40h floor, the elevators will open, exit the elevator. 
+- When entering an elevator on a floor other than the lowest floor or highest floor:
+	- If we need to go down, hit the down arrow button and wait for elevator to arrive. 
+	- When elevator arrives, follow above steps when inside an elevator. 
+	- If we need to go up, hit the up arrow button outside the elevator and wait for arrival. 
+	- When elevator arrives, follow above steps when inside an elevator.
+- When entering an elevator on the top floor, hit the down arrow button and wait for elevator to arrive.
+	- - When elevator arrives, follow above steps when inside an elevator.
+
+
+
+
+release 1: Brushing teeth
+
+- While your breath smells, follow these steps to fix the problem:
+	- Put toothpaste on toothbrush and put toothbrush in mouth and toothpaste on teeth.  
+	- Countdown from 2 minutes until you can stop brushing. 
+	- When 2 minutes arrives, spit toothpaste out of mouth and rinse mouth. 
+- When done brushing, find floss. 
+	- Keep flossing between teeth until every tooth has been touched with the floss. 
+	- Once every tooth has been flossed, rinse out mouth once again. 
+
+- If breath still smells a little or you ate a bad smelling food follow these steps:
+	- Rinse mouth with mouthwash for 30 seconds.
+	- After 30 seconds spit out mouth wash out and rinse out mouth with water. 
+- If breath still smells bad, go to the dentist. 
+- Otherwise you are good to proceed with the rest of your day. 
+
+
+
