@@ -59,36 +59,3 @@ end
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-
-
-  
-
-
-surveys_taken += 1
-
-
-if age == (current_year - year_born) && (garlic_bread == "yes" || health_insurance == "yes")
-    puts "probably not a vampire"
-
-elsif age != (current_year - year_born) && (garlic_bread == "no" && health_insurance == "yes") || (garlic_bread == "yes" && health_insurance == "no") || allergies == "sunshine"
-    puts "probably a vampire"
-   
-
-elsif age != (current_year - year_born) && garlic_bread == "no" && health_insurance == "no"
-  puts "Almost certainly a vampire"
-
-elsif name == "Drake Cula" || name == "Tu Fang"
-  puts "Definitely a vampire"
-
-else 
-  puts "Results inconclusive"
-end 
-
-end
-
-puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-
-
-  
-  
-      
