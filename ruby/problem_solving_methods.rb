@@ -37,3 +37,29 @@ end
 p fib(50)
 
 # release 2 
+
+# We have a set of random numbers and we need to get them in order. Take numbers in pairs. Whichever number is smaller, move it to the left. Keep going through the list until you get through all the numbers where the number on the left is always smaller than the number on the right. 
+
+array = [25, 4, 1, 19, 43, 5, 0] 
+
+
+ def bubble_sort(array)
+  n = array.length
+  i = 0
+  while i < array.length
+    swapped = false
+
+    (n-1).times do |i|
+      if array[i] > array[i+1]
+        array[i], array[i+1] = array[i+1], array[i]
+        swapped = true
+      end
+    end
+
+    break unless swapped
+  end
+
+  array
+end
+
+bubble_sort(array)
