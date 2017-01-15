@@ -43,23 +43,23 @@ p fib(50)
 array = [25, 4, 1, 19, 43, 5, 0] 
 
 
- def bubble_sort(array)
+ def sort(array)
   n = array.length
   i = 0
   while i < array.length
-    swapped = false
+    
 
     (n-1).times do |i|
       if array[i] > array[i+1]
         array[i], array[i+1] = array[i+1], array[i]
-        swapped = true
+        
       end
     end
 
-    break unless swapped
+    i += 1
   end
 
   array
 end
 
-bubble_sort(array)
+sort(array)
