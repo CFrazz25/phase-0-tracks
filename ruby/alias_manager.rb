@@ -1,7 +1,7 @@
 
 
 def vowels_consonant_movement2(name)
- name = name.split(" ")
+ name = name.downcase.split(" ")
 first_name = name[0]
 second_name = name[1]
   consonants = "bcdfghjklmnpqrstvwxyz"
@@ -65,9 +65,15 @@ second_name = name[1]
     x += 1
   end
   
-  return translated_name[0].upcase
+  first_letter = translated_name[0].upcase
+  translated_name.delete_at(0)
+  translated_name.insert(0, first_letter)
   
-  # translated_name.join("") + " " + translated_name2.join("")
+  first_letter2 = translated_name2[0].upcase
+  translated_name2.delete_at(0)
+  translated_name2.insert(0, first_letter2)
+  
+  return translated_name2.join("") + " " + translated_name.join("")
   
   
   
@@ -79,4 +85,4 @@ second_name = name[1]
   
 end
 
-vowels_consonant_movement2("felicia torres")
+vowels_consonant_movement2("Felicia Torres")
