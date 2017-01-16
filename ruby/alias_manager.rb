@@ -76,13 +76,16 @@ second_name = name[1]
   return translated_name2.join("") + " " + translated_name.join("")
   
   
-  
-  
-  
-  
-  
-  
-  
 end
 
-vowels_consonant_movement2("Felicia Torres")
+# Entering names into data 
+fake_names = []
+puts "What is your name? Type 'quit' to exit. "
+name = gets.chomp
+until name == "quit"
+fake_names.push "#{name} is actually #{vowels_consonant_movement2(name)}"
+puts "Another name? Type 'quit' to exit."
+name = gets.chomp
+end
+
+puts fake_names
