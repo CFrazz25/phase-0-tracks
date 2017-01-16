@@ -15,12 +15,6 @@ new_calc = calculation.split(" ")
 
 until calculation == "done"
 
-  if calculation.length <= 3
-  puts "make sure you put a space between your calcuations."
-  elsif calculation.length >= 6
-  puts "only calculate two numbers right now, and make sure you type in numbers(integers), and don't spell them out."
-end
-
 integer1 = new_calc[0].to_i
 operator = new_calc[1].to_s
 integer2 = new_calc[2].to_i
