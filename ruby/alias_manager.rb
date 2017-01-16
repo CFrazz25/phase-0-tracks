@@ -1,4 +1,9 @@
-
+#psuedocode: When someone enters a name into the system, we want to give them a fake name in return to use. To do this we will take the name, and separate them, and then reverse the first and last name. Then we'll need to
+# make the names all lowercase. We will need to make the names lowercase so we can do the next step. For every vowel in the name, we will take that vowel, and change it up with what the next vowel would be next to it. We will also 
+# use this same strategy with every letter that's a consonant. We will take the consonant letters and switch them with the next letter in the alphabet that would be a consonant. Once we loop through all the letters and change them
+# with their respective vowel or consonant, we will then need to re-combine the first and last name. Each name will have looped through the letter changes separately from one another. Once we combine them back together, we'll need
+# to delete the first letter of each name and make them become uppercase. Then the names are combined with the first letters uppercase again. After this is complete, we'll make a driver code to ask a user what their name is, the name
+# they enter will then be entered through the method we used to change all the letters. Each name entered will enter a data structure to be stored until the user(s) are done entering their names. 
 
 def vowels_consonant_movement2(name)
  name = name.downcase.split(" ")
