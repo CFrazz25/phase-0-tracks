@@ -10,13 +10,12 @@ class Hangman
   def create_word(word)
     @word = word
     puts "Cool, but this will stay hidden. ;-)"
+    puts "your friend will get #{@word.length} guesses. Repeat guesses, will not count against you."
+    p @secret_letters = ["_ " * @word.length]
   end 
   
   def guessed_letters(letter)
     @letter = letter
-    if @letter == letter
-      puts "you guessed that already..."
-    end
   end
     
   
@@ -26,7 +25,7 @@ class Hangman
        if all_guesses.include?(letter)
          secret_word << letter 
        else 
-         secret_word << "_"
+         secret_word << "_ "
        end
     end
     return secret_word
@@ -47,25 +46,24 @@ end
 game = Hangman.new 
 puts "Please create a word for your friend to guess."
 word = gets.chomp 
-p word.length
 game.create_word(word)
 
 
 # Here the user guesses the letters in the word. 
 all_guesses = []
-i = 0
-while i < word.length
+number_of_guesses = word.length
+new_guesses = []
+until new_guesses.length == number_of_guesses
 puts "guess a letter"
 guessed_letter = gets.chomp 
 game.guessed_letters(guessed_letter)
 all_guesses << guessed_letter
-all_guesses
-x = 0 
-while x < all_guesses.length 
+p all_guesses
+#below will make sure repeat guesses are not counted against the user 
+p new_guesses = all_guesses.uniq
+
 p game.show_progress(all_guesses)
-x += 1
-end
-i +=1 
+
 end 
 puts "that's all the guesses you get."
 
