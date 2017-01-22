@@ -1,10 +1,7 @@
 class Hangman
-  attr_reader :word
-  attr_reader :letter
   
   def initialize
-    @letter = ""
-    @word = ""
+     
   end
   
   def create_word(word)
@@ -54,15 +51,17 @@ all_guesses = []
 number_of_guesses = word.length
 new_guesses = []
 until new_guesses.length == number_of_guesses
-puts "guess a letter"
-guessed_letter = gets.chomp 
-game.guessed_letters(guessed_letter)
-all_guesses << guessed_letter
-p all_guesses
+  puts "guess a letter"
+  guessed_letter = gets.chomp 
+  game.guessed_letters(guessed_letter)
+  all_guesses << guessed_letter
+  puts "Here's what you have guessed so far:"
+  puts all_guesses
 #below will make sure repeat guesses are not counted against the user 
-p new_guesses = all_guesses.uniq
+  new_guesses = all_guesses.uniq
+  puts "you have #{word.length - new_guesses.length} guesses left!"
 
-p game.show_progress(all_guesses)
+  p game.show_progress(all_guesses)
 
 end 
 puts "that's all the guesses you get."
