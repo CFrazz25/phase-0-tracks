@@ -70,5 +70,26 @@ console.log(showObject(person1, person2));
 // The words will be of random varying length, 1 letter minimum, 10 letter maximum.
 // We can use a function that generates random numbers. 
 
+function random_words (integer) {
+  arrays = [];
+  
+  var words = "abcdefghijklmnopqrstuvwxyz";
+  for (x = 0; x < integer; x++) {
+    
+    var word = "";
+    for (var i = 0; i < Math.floor((Math.random() * 10) + 1); i++) {
+    ((word += (words.charAt(Math.floor((Math.random() * words.length))))));
+    
+    }  arrays.push(word);
+  }return(arrays);
+}
+ 
 
 
+//driver code for release 2
+for (var i = 0; i < 10; i++) {
+
+console.log(lists = random_words(Math.floor((Math.random() * 10) + 1)));
+console.log("Here's the longest word: " + longest_word(lists));
+
+}
