@@ -1,0 +1,60 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM students;
+1|Henry|2.6|3
+2|Charles|3.5|2
+3|Sam|1.2|1
+4|Christina|4.0|2
+5|Chris|1.4|1
+6|Joanna|3.2|3
+7|Kevin|3.7|3
+8|Darla|2.3|2
+9|Abbey|1.9|1
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE teachers SET subject="Culinary Arts" WHERE name="Mrs. Frazzini";
+sqlite> SELECT * FROM teachers;
+1|Mr. Johnson|false|Chemistry
+2|Mrs. Frazzini|false|Culinary Arts
+3|Mr. Smith|true|Psychology
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM students, teachers WHERE students.teacher_id = teachers.id
+   ...> ;
+1|Henry|2.6|3|3|Mr. Smith|true|Psychology
+2|Charles|3.5|2|2|Mrs. Frazzini|false|Culinary Arts
+3|Sam|1.2|1|1|Mr. Johnson|false|Chemistry
+4|Christina|4.0|2|2|Mrs. Frazzini|false|Culinary Arts
+5|Chris|1.4|1|1|Mr. Johnson|false|Chemistry
+6|Joanna|3.2|3|3|Mr. Smith|true|Psychology
+7|Kevin|3.7|3|3|Mr. Smith|true|Psychology
+8|Darla|2.3|2|2|Mrs. Frazzini|false|Culinary Arts
+9|Abbey|1.9|1|1|Mr. Johnson|false|Chemistry
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT students.name, students.gpa, teachers.name, teachers.subject FROM students JOIN teachers ON students.teacher_id = teachers.id;
+Henry|2.6|Mr. Smith|Psychology
+Charles|3.5|Mrs. Frazzini|Culinary Arts
+Sam|1.2|Mr. Johnson|Chemistry
+Christina|4.0|Mrs. Frazzini|Culinary Arts
+Chris|1.4|Mr. Johnson|Chemistry
+Joanna|3.2|Mr. Smith|Psychology
+Kevin|3.7|Mr. Smith|Psychology
+Darla|2.3|Mrs. Frazzini|Culinary Arts
+Abbey|1.9|Mr. Johnson|Chemistry
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM students WHERE name = "Darla";
+sqlite> SELECT * FROM students;
+1|Henry|2.6|3
+2|Charles|3.5|2
+3|Sam|1.2|1
+4|Christina|4.0|2
+5|Chris|1.4|1
+6|Joanna|3.2|3
+7|Kevin|3.7|3
+9|Abbey|1.9|1
