@@ -58,3 +58,47 @@ sqlite> SELECT * FROM students;
 6|Joanna|3.2|3
 7|Kevin|3.7|3
 9|Abbey|1.9|1
+
+
+RELEASE 3:
+INNER JOIN:  The INNER JOIN returns all rows from both tables where there is a match. If there are rows in first table that do not have matches in second table, those rows will not be listed.
+
+sqlite> SELECT students.name, teachers.name FROM students INNER JOIN teachers ON students.teacher_id = teachers.id;
+Henry|Mr. Smith
+Charles|Mrs. Frazzini
+Sam|Mr. Johnson
+Christina|Mrs. Frazzini
+Chris|Mr. Johnson
+Joanna|Mr. Smith
+Kevin|Mr. Smith
+Abbey|Mr. Johnson
+
+LEFT JOIN:The LEFT JOIN returns all the rows from the first table, even if there are no matches in the second table. If there are rows in first table that do not have matches in second table, those rows also will be listed.
+
+sqlite> SELECT students.name, teachers.name FROM students LEFT JOIN teachers ON students.teacher_id = teachers.id;
+Henry|Mr. Smith
+Charles|Mrs. Frazzini
+Sam|Mr. Johnson
+Christina|Mrs. Frazzini
+Chris|Mr. Johnson
+Joanna|Mr. Smith
+Kevin|Mr. Smith
+Abbey|Mr. Johnson
+
+RIGHT JOIN (not supported on command line): The RIGHT JOIN returns all the rows from the second table, even if there are no matches in the first table. If there had been any rows in second table that did not have matches in first table, those rows also would have been listed.
+
+sqlite> SELECT students.name, teachers.name FROM students RIGHT JOIN teachers ON students.teacher_id = teachers.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+FULL OUTER JOIN (not supported on command line): 
+
+The FULL OUTER JOIN keyword returns all rows from the left table (table1) and from the right table (table2).
+
+The FULL OUTER JOIN keyword combines the result of both LEFT and RIGHT joins.
+
+
+** good source: http://www.w3schools.com/sql/sql_join_full.asp **
+
+
+
+
