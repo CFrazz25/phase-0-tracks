@@ -12,6 +12,9 @@ SQL
 
 db.execute(create_table_cmd)
 
+
+
+
 # method to gamble 
 def gambling (name, bet)
   $money_left = bet
@@ -45,8 +48,12 @@ def gambling (name, bet)
     p "you have $#{$money_left} now."
   end 
 end
-#end of gambling method 
+#end of gambling method
 
+
+# Driver code to ask new gambler what they want to bet, and then
+# the methods will add up how much many they have left that the 
+# program has to pay them out. 
 puts "What's your name?"
 $name = gets.chomp
 name = $name
@@ -58,10 +65,13 @@ bet = gets.chomp.to_i
 gambling(name, bet)
 money_left = $money_left
 
+
+#method to add gamblers into table 
 def create_gambler(db, name, money_left)
   db.execute("INSERT INTO gamblers (name, money_left) VALUES (?, ?)", [name, money_left])
 end
 
+#iteration to see what the current table is of gamblers
 names.each do 
   create_gambler(db, name, money_left)
 end 
