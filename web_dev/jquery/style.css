@@ -1,0 +1,62 @@
+
+.red{
+    display: inline-block;
+    height:20px;
+  width:70px;
+  
+  font-family:arial;
+  font-weight:bold;
+  color:red;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.yellow {
+
+    height:20px;
+  width:70px;
+  
+  font-family:arial;
+  font-weight:bold;
+  color:red;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.green {
+
+    height:20px;
+  width:70px;
+  font-family:arial;
+  font-weight:bold;
+  color:green;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.blue {
+
+    height:20px;
+  width:70px;
+  font-family:arial;
+  font-weight:bold;
+  color:blue;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.pink {
+
+    height:20px;
+  width:70px;
+  font-family:arial;
+  font-weight:bold;
+  color:pink;
+  border-radius: 5px;
+  text-align:center;
+  margin-top:2px;
+}
